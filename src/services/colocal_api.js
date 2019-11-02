@@ -23,7 +23,6 @@ export const new_user = async function (data) {
         alert("No hay conexión al web service", "Error");
     }
 }
-}
 
 export const validate_user = (data) => {
   return axios.post(`${apiUrl}/usuario/valida`, data);
