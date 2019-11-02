@@ -1,1 +1,1 @@
-export const apiUrl = 'http://wscolocal.herokuapp.com';
+export const apiUrl = 'https://wscolocal.herokuapp.com';
