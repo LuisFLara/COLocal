@@ -65,3 +65,12 @@ a {
   padding: 10px;
   background-color: #0B3954;
 }
+
+.sub {
+  text-decoration: underline;
+}
+
+.img-marca {
+  width: 150px;
+  height: 150px;
+}
