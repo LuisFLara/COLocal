@@ -7,8 +7,11 @@
   text: #333333
 */
 
-* {
+*{
   font-family: "Arial", Times, serif;
+}
+
+body {
   color: #333333;
 }
 
@@ -23,10 +26,6 @@ body {
 
 a {
   color: inherit;
-}
-
-#main-body {
-  margin-top: 100px;
 }
 
 .btn-primary {
@@ -53,7 +52,6 @@ a {
 
 .bg-dark {
   color: white;
-  background-color: #0B3954 !important;
 }
 
 /* erase me PLEASE */
@@ -73,8 +71,19 @@ a {
 }
 
 .img-marca {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
+}
+
+.card-body {
+  padding: 0px;
+  width: 200px;
+  height: 200px;
+  align-content: center;
+}
+
+.align-card-body {
+  text-align: center;
 }
 
 #card-container {
@@ -89,4 +98,30 @@ a {
 
 .colocal-img-1 {
   height: 56px;
+}
+
+.hero-urban-category {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(http://carlos.zzhype.com/localite/assets/img/backgroundUrbanCategory.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-header-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }

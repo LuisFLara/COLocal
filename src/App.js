@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Title from './components/Title';
 import CardContainer from './components/CardContainer';
+import Hero from './components/Hero';
+import { all } from './services/colocal_api';
+
+all();
 
 function App() {
   return (
     <div className="App">
-      <Header><img src="img/COLocal.png" alt="COLocal" className="colocal-img-1" /></Header>
+      <Header/>
       <div id="main-body">
-        <Title><img src="img/COLocal2.png" alt="COLocal2" className="colocal-img-2" /></Title>
+        <Hero />
         <CardContainer />
       </div>
     </div>
