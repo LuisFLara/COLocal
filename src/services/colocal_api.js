@@ -5,8 +5,24 @@ export const all = () => {
   return axios.get(apiUrl);
 }
 
-export const new_user = (data) => {
-  return axios.post(`${apiUrl}/usuario/registrar`, data);
+export const new_user = async function (data) {
+
+    try {
+        //console.log(this.props.switchValue);
+        const res = await axios.post('https://wscolocal.herokuapp.com/usuario/consultar', {
+            id_usuario: 10
+        });
+
+        console.log(res.data);
+
+        //console.log(res);
+
+
+    } catch (e) {
+        console.log(e);
+        alert("No hay conexión al web service", "Error");
+    }
+}
 }
 
 export const validate_user = (data) => {
