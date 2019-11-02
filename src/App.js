@@ -7,9 +7,9 @@ import CardContainer from './components/CardContainer';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header><img src="img/COLocal.png" alt="COLocal" className="colocal-img-1" /></Header>
       <div id="main-body">
-        <Title><span className="sub">COL</span>ocal</Title>
+        <Title><img src="img/COLocal2.png" alt="COLocal2" className="colocal-img-2" /></Title>
         <CardContainer />
       </div>
     </div>
