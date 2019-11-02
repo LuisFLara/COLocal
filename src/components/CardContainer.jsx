@@ -30,8 +30,8 @@ const exampleData = [
 ]
 
 const renderCards = () => {
-  return exampleData.map((element) => {
-    return <Card text= {element.text} title={element.title} img={element.image} className="m-2" />;
+  return exampleData.map((element, index) => {
+    return <Card text= {element.text} title={element.name} img={element.image} className="m-2" key={index} />;
   });
 }
 

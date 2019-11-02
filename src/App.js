@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <div id="main-body">
-        <Title text="COLocal"/>
+        <Title><span className="sub">COL</span>ocal</Title>
         <CardContainer />
       </div>
     </div>
