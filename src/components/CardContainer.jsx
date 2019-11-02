@@ -106,13 +106,13 @@ const exampleData = [
 
 const renderCards = () => {
   return exampleData.map((element, index) => {
-    return <Card text= {element.text} title={element.name} img={element.image} className="m-2" key={index} />;
+    return <Card text= {element.text} title={element.name} img={element.image} className="m-2" key={index} id={index} />;
   });
 }
 
 const CardContainer = (props) => {
   return(
-    <div className="d-flex" id="card-container">
+    <div className="d-flex mt-5 pt-5" id="brands">
       {renderCards()}
     </div>
   );

@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 
 const Header = (props) => {
   return (
@@ -10,16 +13,16 @@ const Header = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="/">Inicio <span className="sr-only">(current)</span></a>
+            <Link to="/" className="nav-link">Inicio <span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">Nuestros socios</a>
+            <Link to="/showBrands" className="nav-link">Nuestros socios</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">Contacto</a>
+            <Link to="/" className="nav-link">Contacto</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">Sobre nosotros</a>
+            <Link to="/" className="nav-link">Sobre nosotros</Link>
           </li>
         </ul>
         <button className="btn btn-primary m-2 my-sm-0 col-md-12 col-lg-2 col-xl-1">¡Registrate!</button>
