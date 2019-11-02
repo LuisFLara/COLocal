@@ -3,6 +3,9 @@ import './App.css';
 import Header from './components/Header';
 import CardContainer from './components/CardContainer';
 import BrandContainer from './components/BrandContainer';
+import Notices from './components/Notices';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
 import Hero from './components/Hero';
 import {
   BrowserRouter as Router,
@@ -29,8 +32,17 @@ const App = () => {
         <Route path={`/ShowBrand/:brandId`}>
           <Brand />
         </Route>
+        <Route path="/SignUp">
+          <SignUp />
+        </Route>
+        <Route path="/SignIn">
+          <SignIn />
+        </Route>
         <Route path="/">
           <Hero />
+          <Notices />
+          <h2 className="text-center">Nuestras marcas:</h2>
+          <CardContainer />
         </Route>
       </Switch>
   </Router>
