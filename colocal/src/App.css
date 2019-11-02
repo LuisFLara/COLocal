@@ -1,0 +1,67 @@
+/*
+  Color palette:
+  primary: #F4623A
+  danger: #DE1A1A
+  background: #E8EBF7
+  confirm: #0B3954
+  text: #333333
+*/
+
+* {
+  font-family: "Arial", Times, serif;
+  color: #333333;
+}
+
+body {
+  background-color: #E8EBF7;
+}
+
+.App {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+}
+
+#main-body {
+  margin-top: 65px;
+}
+
+.btn-primary {
+  background-color: #f4623a;
+  border-color: #f4623a;
+}
+
+.btn-primary:hover {
+  background-color: #c24f2f;
+  border-color: #c24f2f;
+}
+
+.btn-outline-primary {
+  color: #f4623a;
+  border-color: #f4623a;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  border-color: #f4623a;
+  background-color: #f4623a;
+}
+
+
+.bg-dark {
+  color: white;
+  background-color: #0B3954;;
+}
+
+/* erase me PLEASE */
+.card {
+  width: 200px;
+}
+
+.card-img-top {
+  padding: 10px;
+  background-color: #0B3954;
+}
