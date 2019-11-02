@@ -2,20 +2,38 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import CardContainer from './components/CardContainer';
+import BrandContainer from './components/BrandContainer';
 import Hero from './components/Hero';
-import { all } from './services/colocal_api';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
 
-all();
+const Brand = () => {
+  let { brandId } = useParams();
+  return  <BrandContainer id={brandId} />
+}
 
-function App() {
-  return (
-    <div className="App">
+const App = () => {
+  return(
+  <Router>
       <Header/>
-      <div id="main-body">
-        <Hero />
-        <CardContainer />
-      </div>
-    </div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/ShowBrands">
+          <CardContainer />
+        </Route>
+        <Route path={`/ShowBrand/:brandId`}>
+          <Brand />
+        </Route>
+        <Route path="/">
+          <Hero />
+        </Route>
+      </Switch>
+  </Router>
   );
 }
 

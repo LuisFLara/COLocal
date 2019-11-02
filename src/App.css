@@ -86,9 +86,9 @@ a {
   text-align: center;
 }
 
-#card-container {
+#brands {
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .colocal-img-2 {
