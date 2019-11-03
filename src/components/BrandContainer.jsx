@@ -1,7 +1,6 @@
 import React from 'react';
-import { redBright } from 'ansi-colors';
 import { get_brands } from '../services/colocal_api';
-import { isEmpty, map } from 'lodash';
+import { get, find, isEmpty } from 'lodash';
 
 class BrandContainer extends React.Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class BrandContainer extends React.Component {
     get_brands().then((res) => {
       this.setState((state, props) => {
         return{
-          brandContent: res.data.datos
+          brandContent: find(res.data.datos, (r) => { return r.id_marca == this.props.id})
         }
       });
     }).catch((error) => {
@@ -36,28 +35,36 @@ class BrandContainer extends React.Component {
     })
   }
 
+  renderBrandPortrait(){
+    return isEmpty(this.state.brandContent) ? 'imagenportada' : "../img/noimage.jpeg";
+  }
+
+  renderBrandProfile(){
+    return isEmpty(this.state.brandContent) ? 'imagenprincipal' : "../img/noimage.jpeg";
+  }
+
   render() {
+    console.log(this.state)
     return (
 
       <div className="container" style={{paddingTop:"75px"}}>
         <div style={{position:"relative", left:"0px", top:"0px"}}>
-          
-          <img src={this.state.brandContent.imagenportada != null ? this.state.brandContent.imagenportada : "../img/boutiqueCategoria.jpg"} style={{
-            width: "100%", height: "400px", position: "relative",top: "0",left: "0"}} class="image-fluid" alt=""/>
+          <img src={this.renderBrandPortrait()} style={{
+            width: "100%", height: "400px", position: "relative",top: "0",left: "0"}} className="image-fluid" alt=""/>
 
 
           <div  style={{position: "absolute",
           top: "250px",
           left: "100px",
           }}>
-            <img src={this.state.brandContent.imagenprincipal}  style={{height:200, width:200,}} alt=""/>
+            <img src={this.renderBrandProfile()}  style={{height:200, width:200,}} alt=""/>
           </div>
 
           <div style={{
             position: "absolute",
             top: "340px",
             left: "325px",}}>
-              <label htmlFor="" style={{fontWeight:"bold", color:"white", fontSize:35}}> {this.state.brandContent.nombremarca} </label>
+              <label htmlFor="" style={{fontWeight:"bold", color:"white", fontSize:35}}>{get(this.state.brandContent,'nombremarca')}</label>
             </div>
           <div style={{
             position: "absolute",
@@ -65,7 +72,7 @@ class BrandContainer extends React.Component {
             left: "325px",
           }}>
             {/* Categoria*/}
-            <a href="" style={{ fontSize: 13 }}>#{this.state.brandContent.categoria} </a>
+            <a href="/ShowBrands" style={{ fontSize: 13 }}>{get(this.state.brandContent,'categoria')}</a>
           </div>
 
 
@@ -87,30 +94,30 @@ class BrandContainer extends React.Component {
               </div>
               <div className="divInfoProfileBrand">
                 {/* Descripción */}
-                <label htmlFor="" className="textInfoProfileBrand">{this.state.brandContent.descripcion}</label>
+                <label htmlFor="" className="textInfoProfileBrand">{get(this.state.brandContent,'descripcion')}</label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Domicilio */}
-                <label htmlFor="" className="textInfoProfileBrand">Nos ubicamos en: {this.state.brandContent.domicilio}</label>
+                <label htmlFor="" className="textInfoProfileBrand">{get(this.state.brandContent,'domicilio')}</label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Domicilio */}
-                <label htmlFor="" className="textInfoProfileBrand">Horario: {this.state.brandContent.horario} </label>
+                <label htmlFor="" className="textInfoProfileBrand">{get(this.state.brandContent,'horario')}</label>
 
               </div>
               <div className="divInfoProfileBrand">
                 {/* Teléfono */}
-                <label htmlFor="" className="textInfoProfileBrand">Teléfono:  {this.state.brandContent.telefono} </label>
+                <label htmlFor="" className="textInfoProfileBrand">{get(this.state.brandContent,'telefono')}</label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Correo */}
-                <label htmlFor="" className="textInfoProfileBrand">correo: {this.state.brandContent.correo} </label>
+                <label htmlFor="" className="textInfoProfileBrand">{get(this.state.brandContent,'correo')}</label>
 
               </div>
             </div>

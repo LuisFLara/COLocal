@@ -103,6 +103,10 @@ a {
   justify-content: center;
 }
 
+.h-auto {
+  height: auto !important;
+}
+
 .colocal-img-2 {
   width: 200px;
   height: 75px;

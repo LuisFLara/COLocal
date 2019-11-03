@@ -20,7 +20,7 @@ class NewBrandForm extends React.Component{
     
      handleSubmit = (event) => {
       let data = {}
-      if(!localStorage.getItem('user') || localStorage.getItem('user') == "null"){
+      if(!localStorage.getItem('user') || localStorage.getItem('user') === "null"){
         alert('Inicie sesión para continuar');
         event.preventDefault();
         return window.location.replace("/SignIn");
