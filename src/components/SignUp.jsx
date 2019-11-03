@@ -8,10 +8,15 @@ const handleSubmit = (event) =>
   map(event.currentTarget, (input) => {
     return data[input.id] = input.value;
   })
+  if (data['p_idtipousuario'].checked){
+    data['p_idtipousuario'] = 2;
+  }
+  else {
+    data['p_idtipousuario']= 1;
+  }
   new_user(data).then((res) =>{
-    if(res.code >= 200 && res.code <= 400){
-      return window.location.replace("/SignIn");
-    }
+    event.preventDefault();
+    return window.location.replace("/SignIn");
   }).catch((error) => {
     console.log(error);
   });
@@ -26,14 +31,14 @@ const SignUp = () => {
           <input className="form-field d-block" required id="p_nombre"/>
           <label className="form-field d-block" html_for="p_primerapellido">Primer Apellido</label>
           <input className="form-field d-block" required id="p_primerapellido"/>
-          <label className="form-field d-block" html_for="p_segundoapelido">Segundo Apellido</label>
-          <input className="form-field d-block" id="p_segundoapelido"/>
+          <label className="form-field d-block" html_for="p_segundoapellido">Segundo Apellido</label>
+          <input className="form-field d-block" id="p_segundoapellido"/>
           <label className="form-field d-block" html_for="p_fechanacimiento">Fecha de nacimiento</label>
           <input className="form-field d-block" required id="p_fechanacimiento" type="date"/>
           <label className="form-field d-block" html_for="p_telefono">Telefono</label>
           <input className="form-field d-block" required id="p_telefono"/>
-          {/* <label className="form-field d-block" html_for="p_vendedor">Vendedor?</label>
-          <input className="form-field d-block" id="p_vendedor" type="checkbox"/> */}
+          <label className="form-field d-block" html_for="p_idtipousuario">Vendedor?</label>
+          <input className="form-field d-block" id="p_idtipousuario" type="checkbox"/>
           <label className="form-field d-block" html_for="p_correo">Correo electronico</label>
           <input className="form-field d-block" required id="p_correo" type="email"/>
           <label className="form-field d-block" html_for="p_contrasena">Contraseña</label>
@@ -44,10 +49,10 @@ const SignUp = () => {
           <input className="form-field d-block ml-auto" required id="d_calle"/>
           <label className="form-field d-block ml-auto" html_for="d_colonia">Colonia</label>
           <input className="form-field d-block ml-auto" required id="d_colonia"/>
-          <label className="form-field d-block ml-auto" html_for="d_nointerior">No. Exterior</label>
-          <input className="form-field d-block ml-auto" required id="d_nointerior"/>
-          <label className="form-field d-block ml-auto" html_for="d_no_interior">No. Interior</label>
-          <input className="form-field d-block ml-auto" id="d_no_interior"/>
+          <label className="form-field d-block ml-auto" html_for="d_noexterior">No. Exterior</label>
+          <input className="form-field d-block ml-auto" required id="d_noexterior"/>
+          <label className="form-field d-block ml-auto" html_for="d_nointerior">No. Interior</label>
+          <input className="form-field d-block ml-auto" id="d_nointerior"/>
           <label className="form-field d-block ml-auto" html_for="d_codigopostal">Código Postal</label>
           <input className="form-field d-block ml-auto" required id="d_codigopostal"/>
           <label className="form-field d-block ml-auto" html_for="d_entidadfederativa">Entidad Federativa</label>

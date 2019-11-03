@@ -1,6 +1,7 @@
 import React from 'react';
-import { all } from '../services/colocal_api';
+import { all, search_user_data } from '../services/colocal_api';
 
+search_user_data(10).then(res => { console.log(res) })
 class BrandContainer extends React.Component {
   constructor(props) {
     super(props);
