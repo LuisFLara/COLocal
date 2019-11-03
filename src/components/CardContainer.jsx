@@ -42,7 +42,7 @@ const renderCards = () => {
 
 const CardContainer = (props) => {
   return(
-    <div className="d-flex w-1100 center m-auto" id="brands">
+    <div className="d-flex w-1100 center m-auto flex-wrap" id="brands">
       {renderCards()}
     </div>
   );
