@@ -40,4 +40,6 @@ export const new_brand = (id) => {
   return axios.post(`${apiUrl}/marca/registro`, id);
 }
 
-// /marca/registro
+export const get_brands = () => {
+  return axios.post(`${apiUrl}/marca/consultar`, 1);
+}
