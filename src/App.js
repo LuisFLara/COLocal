@@ -10,6 +10,8 @@ import Hero from './components/Hero';
 import Contact from './components/Contact.js';
 import Categories from './components/Categories'
 import NewBrandForm from './components/NewBrandForm';
+import AllBrands from './components/AllBrandings';
+import SelectedBrands from './data/brands.json';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,8 +43,8 @@ const App = () => {
           <NewBrandForm />
         </Route>
         <Route path="/ShowBrands">
-          <div className="mt-5 pt-5 d-flex" id="#brands">
-            <CardContainer />
+          <div className="mt-5 pt-5 d-flex" id="brands">
+            <AllBrands />
           </div>
         </Route>
         <Route path={`/ShowBrand/:brandId`}>
@@ -57,7 +59,7 @@ const App = () => {
         <Route path="/">
           <Hero />
           <h2 className="text-center">Nuestras marcas:</h2>
-          <CardContainer />
+          <CardContainer data={SelectedBrands}/>
           <Categories/>
           <Contact />
         </Route>

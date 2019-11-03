@@ -20,12 +20,12 @@ class Card2 extends React.Component {
   render() {
     return (
       <div onMouseOver={() => this.handleClick(true)} onMouseOut={() => this.handleClick(false)}>
-        <Link to={`/ShowBrand/${this.props.id}`}>
+        <Link to={`/ShowBrand/${this.props.cardContent.id_marca }`}>
           <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
             <div className={`card ${this.props.className}`} key="front">
             <div className="card-body">
               <img
-                src={this.props.img}
+                src={this.props.cardContent.imagenprincipal}
                 className="card-img-top img-marca"
                 alt="img1"
               />
@@ -33,9 +33,9 @@ class Card2 extends React.Component {
           </div>
             <div className="card" key="back">
               <div className="card-body d-flex-block text-center">
-                <h2 className="card-title d-block col-12">{this.props.title}</h2>
+                <h2 className="card-title d-block col-12">{this.props.cardContent.nombremarca}</h2>
                 <br />
-                <p className="card-text d-block col-12">{this.props.text}</p>
+                <p className="card-text d-block col-12">{this.props.cardContent.descripcion}</p>
               </div>
             </div>
           </ReactCardFlip>

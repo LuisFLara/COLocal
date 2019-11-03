@@ -1,8 +1,8 @@
 import React from 'react';
-import { all, search_user_data } from '../services/colocal_api';
 import { redBright } from 'ansi-colors';
+import { get_brands } from '../services/colocal_api';
+import { isEmpty, map } from 'lodash';
 
-search_user_data(10).then(res => { console.log(res) })
 class BrandContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -25,8 +25,12 @@ class BrandContainer extends React.Component {
   }
 
   componentDidMount() {
-    all().then((res) => {
-      console.log(res);
+    get_brands().then((res) => {
+      this.setState((state, props) => {
+        return{
+          brandContent: res.data.datos
+        }
+      });
     }).catch((error) => {
       console.log(error);
     })
@@ -45,11 +49,10 @@ class BrandContainer extends React.Component {
           <div  style={{position: "absolute",
           top: "250px",
           left: "100px",
-        
           }}>
             <img src={this.state.brandContent.imagenprincipal}  style={{height:200, width:200,}} alt=""/>
           </div>
-       
+
           <div style={{
             position: "absolute",
             top: "340px",
@@ -64,9 +67,9 @@ class BrandContainer extends React.Component {
             {/* Categoria*/}
             <a href="" style={{ fontSize: 13 }}>#{this.state.brandContent.categoria} </a>
           </div>
-        
 
-      
+
+
 
 
         </div>
@@ -119,7 +122,7 @@ class BrandContainer extends React.Component {
               backgroundColor: "white",
               paddingBottom: "10px"
             }}>
-           
+
               <div className="divInfoProfileBrand">
                 
 
