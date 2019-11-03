@@ -8,6 +8,8 @@ import Notices from './components/Notices';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Hero from './components/Hero';
+import Contact from './components/Contact.js';
+import Categories from './components/Categories'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,13 +17,14 @@ import {
   useParams
 } from "react-router-dom";
 
+
 const Brand = () => {
   let { brandId } = useParams();
   return  <BrandContainer id={brandId} />
 }
 
 const HeaderSwitch = () => {
-  if(localStorage.getItem("user") != "null"){
+  if(localStorage.getItem("user") !== "null"){
     return <UserHeader />;
   }
   return <Header />;
@@ -51,6 +54,8 @@ const App = () => {
           <Notices />
           <h2 className="text-center">Nuestras marcas:</h2>
           <CardContainer />
+          <Categories/>
+          <Contact />
         </Route>
       </Switch>
   </Router>
