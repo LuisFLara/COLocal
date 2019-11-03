@@ -7,8 +7,21 @@ class BrandContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      brandContent: {}
+      brandContent: {
+        categoria: "Ropa",
+        correo: "Carlos@mail.com",
+        descripcion: "Una marca diferente, del barrio a tu guardaropa",
+        domicilio: "13 De Septiembre 677 Col. Villas de oro",
+        horario: "Lunes a viernes 9am - 5pm",
+        id_marca: 1,
+        imagenportada: null,
+        imagenprincipal: "../img/marcas/estelarMarca.jpg",
+        nombremarca: "Trivandal",
+        telefono: "3121942513"
+
+      }
     }
+
   }
 
   componentDidMount() {
@@ -25,7 +38,7 @@ class BrandContainer extends React.Component {
       <div className="container" style={{paddingTop:"75px"}}>
         <div style={{position:"relative", left:"0px", top:"0px"}}>
           
-          <img src="../img/boutiqueCategoria.jpg" style={{
+          <img src={this.state.brandContent.imagenportada != null ? this.state.brandContent.imagenportada : "../img/boutiqueCategoria.jpg"} style={{
             width: "100%", height: "400px", position: "relative",top: "0",left: "0"}} class="image-fluid" alt=""/>
 
 
@@ -34,14 +47,14 @@ class BrandContainer extends React.Component {
           left: "100px",
         
           }}>
-            <img src="../img/marcas/estelarMarca.jpg"  style={{height:200, width:200,}} alt=""/>
+            <img src={this.state.brandContent.imagenprincipal}  style={{height:200, width:200,}} alt=""/>
           </div>
        
           <div style={{
             position: "absolute",
             top: "340px",
             left: "325px",}}>
-              <label htmlFor="" style={{fontWeight:"bold", color:"white", fontSize:35}}>Estelar</label>
+              <label htmlFor="" style={{fontWeight:"bold", color:"white", fontSize:35}}> {this.state.brandContent.nombremarca} </label>
             </div>
           <div style={{
             position: "absolute",
@@ -49,7 +62,7 @@ class BrandContainer extends React.Component {
             left: "325px",
           }}>
             {/* Categoria*/}
-            <a href="" style={{ fontSize: 13 }}>#Moda</a>
+            <a href="" style={{ fontSize: 13 }}>#{this.state.brandContent.categoria} </a>
           </div>
         
 
@@ -71,30 +84,30 @@ class BrandContainer extends React.Component {
               </div>
               <div className="divInfoProfileBrand">
                 {/* Descripción */}
-                <label htmlFor="" className="textInfoProfileBrand">Una marca dedicada 100% a innovar en moda y ser siempre su mejor opción</label>
+                <label htmlFor="" className="textInfoProfileBrand">{this.state.brandContent.descripcion}</label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Domicilio */}
-                <label htmlFor="" className="textInfoProfileBrand">Nos ubicamos en: 13 de Septiembre 677 Colonia Villas de Oro</label>
+                <label htmlFor="" className="textInfoProfileBrand">Nos ubicamos en: {this.state.brandContent.domicilio}</label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Domicilio */}
-                <label htmlFor="" className="textInfoProfileBrand">Horario: Lunes a viernes 9am - 5pm</label>
+                <label htmlFor="" className="textInfoProfileBrand">Horario: {this.state.brandContent.horario} </label>
 
               </div>
               <div className="divInfoProfileBrand">
                 {/* Teléfono */}
-                <label htmlFor="" className="textInfoProfileBrand">Teléfono: 3121942513</label>
+                <label htmlFor="" className="textInfoProfileBrand">Teléfono:  {this.state.brandContent.telefono} </label>
 
               </div>
 
               <div className="divInfoProfileBrand">
                 {/* Correo */}
-                <label htmlFor="" className="textInfoProfileBrand">correo: "Carlos@mail.com"</label>
+                <label htmlFor="" className="textInfoProfileBrand">correo: {this.state.brandContent.correo} </label>
 
               </div>
             </div>
@@ -108,7 +121,7 @@ class BrandContainer extends React.Component {
             }}>
            
               <div className="divInfoProfileBrand">
-                {/* Descripción */}
+                
 
 
               </div>
