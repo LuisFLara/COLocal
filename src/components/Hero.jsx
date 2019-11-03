@@ -1,9 +1,5 @@
 import React from 'react';
-import { search_user_data } from '../services/colocal_api';
 
-search_user_data(10).then(res => {
-  console.log(res);
-})
 const Hero = () => {
   return (
     <div className="hero-urban-category">

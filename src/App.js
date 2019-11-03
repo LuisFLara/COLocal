@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
+import UserHeader from './components/UserHeader';
 import CardContainer from './components/CardContainer';
 import BrandContainer from './components/BrandContainer';
 import Notices from './components/Notices';
@@ -19,10 +20,17 @@ const Brand = () => {
   return  <BrandContainer id={brandId} />
 }
 
+const HeaderSwitch = () => {
+  if(localStorage.getItem("user") != "null"){
+    return <UserHeader />;
+  }
+  return <Header />;
+}
+
 const App = () => {
   return(
   <Router>
-      <Header/>
+      <HeaderSwitch/>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
