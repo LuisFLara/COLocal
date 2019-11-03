@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { search_user_data } from '../services/colocal_api';
 
 const LinkDependingUserType = () => {
-  if(localStorage.getItem("user") && localStorage.getItem("user") != "null") {
+  if(localStorage.getItem("user") && localStorage.getItem("user") !== "null") {
     console.log(localStorage.getItem("user"))
     let usr_type = search_user_data(localStorage.getItem("user")).then((res) => {
       console.log(res);
       return res
     });
-    return usr_type == '1' ? "/ShowBrands" : "/NewBrand"
+    return usr_type === '1' ? "/ShowBrands" : "/NewBrand"
   }
   return "/SignUp";
 }
