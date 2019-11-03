@@ -24,5 +24,3 @@ export const search_user_data = (id) => {
 export const new_brand = (id) => {
   return axios.post(`${apiUrl}/marca/registro`, id);
 }
-
-// /marca/registro
