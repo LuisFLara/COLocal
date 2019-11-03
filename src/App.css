@@ -437,3 +437,17 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+.divInfoProfileBrand {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+
+}
+
+.textInfoProfileBrand{
+  text-align: justify;
+  font-size: 12;
+
+}

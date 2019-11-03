@@ -8,14 +8,15 @@ class NewBrandForm extends React.Component{
     this.state = {
       file: null
     }    
-    this.handleChange = this.handleChange.bind(this)
+      this.handleChange = this.handleChange.bind(this)
     
-    const handleChange=(event) => {
-      this.state({
-        file: URL.createObjectURL(event.target.files[0])
-      })
     }
-    }
+
+    handleChange(event){
+        this.state({
+          file: URL.createObjectURL(event.target.files[0])
+        })
+      }
     
      handleSubmit = (event) => {
       let data = {}
@@ -81,8 +82,7 @@ class NewBrandForm extends React.Component{
                 </div>
                 <div className="col-md-3">
                   <label  required html_for="p_imagenprincipal">Imagen Principal(url)</label>
-                  <input type="file" onChange={(form_values) => this.handleChange(form_values)} />
-                  <img src={this.state.file} alt=""></img>
+                    <input className="form-control" required id="p_imagenprincipal" />
                 </div>
               </div>
               <br/>
@@ -110,4 +110,4 @@ class NewBrandForm extends React.Component{
       }
 }
 
-module.exports = NewBrandForm;
+export default NewBrandForm;
