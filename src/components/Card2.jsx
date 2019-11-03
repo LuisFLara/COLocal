@@ -32,9 +32,10 @@ class Card2 extends React.Component {
             </div>
           </div>
             <div className="card" key="back">
-              <div className="card-body align-card-middle d-flex-block">
-                <h2 className="card-title">{this.props.title}</h2>
-                <p className="card-text">{this.props.text}</p>
+              <div className="card-body d-flex-block text-center">
+                <h2 className="card-title d-block col-12">{this.props.title}</h2>
+                <br />
+                <p className="card-text d-block col-12">{this.props.text}</p>
               </div>
             </div>
           </ReactCardFlip>
