@@ -15,7 +15,6 @@ const handleSubmit = (event) => {
   })
   event.preventDefault();
   new_brand(data).then((res) =>{
-    debugger;
     return window.location.replace("/Brandings");
   }).catch((error) => {
     console.log(error);
