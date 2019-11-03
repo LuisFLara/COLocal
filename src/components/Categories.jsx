@@ -32,7 +32,7 @@ const Categories = () => {
                                         <div className="bg-black text-center h-100 project">
                                             <div className="d-flex h-100">
                                                 <div className="project-text w-100 my-auto text-center text-lg-right">
-                                                    <a href="#"><h4 className="text-white disabled">Artesanias</h4></a>
+                                                    <a href="/"><h4 className="text-white disabled">Artesanias</h4></a>
                                                 <p className="mb-0 text-white-50">Por que lo mejor siempre es aquello hecho con pasión, descubre lo que colima te ofrece, y dejate envolver de la calidad de nuestros artesanos colimenses</p>
                                                 <hr className="d-none d-lg-block mb-0 mr-0"></hr>
                                             </div>
