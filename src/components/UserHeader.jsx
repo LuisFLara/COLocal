@@ -1,5 +1,4 @@
 import React from 'react';
-import { filter } from 'lodash';
 import {
   Link
 } from "react-router-dom";
