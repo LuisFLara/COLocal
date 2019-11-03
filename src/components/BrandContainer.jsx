@@ -19,7 +19,6 @@ class BrandContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props.state);
     return <p>{this.props.id}</p>;
   }
 }
