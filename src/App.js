@@ -7,11 +7,12 @@ import BrandContainer from './components/BrandContainer';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Hero from './components/Hero';
-import Contact from './components/Contact.js';
+import Contact from './components/Contact';
 import Categories from './components/Categories'
 import NewBrandForm from './components/NewBrandForm';
 import AllBrands from './components/AllBrandings';
 import SelectedBrands from './data/brands.json';
+import News from './components/News';
 import {
   BrowserRouter as Router,
   Switch,
@@ -60,6 +61,7 @@ const App = () => {
           <Hero />
           <h2 className="text-center">Nuestras marcas:</h2>
           <CardContainer data={SelectedBrands}/>
+          <News></News>
           <Categories/>
           <Contact />
         </Route>

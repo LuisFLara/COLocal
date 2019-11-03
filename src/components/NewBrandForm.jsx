@@ -92,6 +92,24 @@ class NewBrandForm extends React.Component{
                   <input className="form-control" required id="p_imagenportada" />
                 </div>
               </div>
+              <br/>
+                <center><h3>Redes Sociales</h3></center>
+
+                <div className="row">
+                  <div className="col-md-3">
+                    <label required html_for="p_Facebook">Link de Facebook</label>
+                    <input className="form-control" required id="p_Facebook" />
+                  </div>
+                  <div className="col-md-3">
+                    <label required html_for="p_Instagram">Link de Instagram</label>
+                    <input className="form-control" required id="p_Instagram" />
+                  </div>
+                  <div className="col-md-3">
+                    <label required html_for="p_Twitter">Link de Twitter</label>
+                    <input className="form-control" required id="p_Twitter" />
+                  </div>
+                </div>
+                <br />
               <div className="row">
                 <div className="col-md-9"></div>
                 <div className="col-md-3">
