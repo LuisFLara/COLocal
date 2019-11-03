@@ -19,11 +19,11 @@ class Card2 extends React.Component {
   }
 
   renderBrand() {
-    return !isEmpty(this.props.cardContent.id_marca) ? this.renderLinkBrand() : this.renderCard();
+    console.log(this.props);
+    return this.renderLinkBrand();
   }
 
   renderLinkBrand() {
-    console.log('link card');
     return (
       <Link to={`/ShowBrand/${this.props.cardContent.id_marca}`}>
         {this.renderCard()}
