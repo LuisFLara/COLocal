@@ -1,19 +1,23 @@
 import React from 'react';
-import { all, search_user_data } from '../services/colocal_api';
 import { redBright } from 'ansi-colors';
+import { get_brands } from '../services/colocal_api';
+import { isEmpty, map } from 'lodash';
 
-search_user_data(10).then(res => { console.log(res) })
 class BrandContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      brandContent: {}
+      brandContent: [],
     }
   }
 
   componentDidMount() {
-    all().then((res) => {
-      console.log(res);
+    get_brands().then((res) => {
+      this.setState((state, props) => {
+        return{
+          brandContent: res.data.datos
+        }
+      });
     }).catch((error) => {
       console.log(error);
     })
@@ -24,7 +28,6 @@ class BrandContainer extends React.Component {
 
       <div className="container" style={{paddingTop:"75px"}}>
         <div style={{position:"relative", left:"0px", top:"0px"}}>
-          
           <img src="../img/boutiqueCategoria.jpg" style={{
             width: "100%", height: "400px", position: "relative",top: "0",left: "0"}} class="image-fluid" alt=""/>
 
@@ -32,11 +35,10 @@ class BrandContainer extends React.Component {
           <div  style={{position: "absolute",
           top: "250px",
           left: "100px",
-        
           }}>
             <img src="../img/marcas/estelarMarca.jpg"  style={{height:200, width:200,}} alt=""/>
           </div>
-       
+
           <div style={{
             position: "absolute",
             top: "340px",
@@ -51,9 +53,9 @@ class BrandContainer extends React.Component {
             {/* Categoria*/}
             <a href="" style={{ fontSize: 13 }}>#Moda</a>
           </div>
-        
 
-      
+
+
 
 
         </div>
@@ -106,7 +108,7 @@ class BrandContainer extends React.Component {
               backgroundColor: "white",
               paddingBottom: "10px"
             }}>
-           
+
               <div className="divInfoProfileBrand">
                 {/* Descripción */}
 

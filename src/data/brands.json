@@ -1,0 +1,47 @@
+[
+  {
+    "nombremarca": "Hackorama",
+    "descripcion": "Hackathon de colima",
+    "categoria": "Tecnologia",
+    "correo": "hackorame@dev.io",
+    "domicilio": "Av. V. Carranza #333",
+    "horario": "1, 2 y 3 de Noviembre",
+    "imagenprincipal": "https://app-hackorama.herokuapp.com/assets/hackorama_logo-30707c7284f591d01236796c8e09b3af5ce5c17491588b3f27b8e0be6c54a594.svg",
+    "telefono": "333-333-3333"
+  },
+  {
+    "nombremarca":  "Michelada.io",
+    "descripcion": "Empresa de desarrollo de software",
+    "categoria": "Tecnologia",
+    "correo": "contact@michelada.io",
+    "domicilio": "Av. V. Carranza #333",
+    "horario": "Lunes a Sabado 09:00am - 08:00pm",
+    "imagenprincipal": "https://michelada.io/images/v3/logo.svg",
+    "telefono": "333-333-3333"
+  },
+  {
+    "nombremarca": "Treehouse",
+    "descripcion": "Empresa de desarrollo de software",
+    "imagenprincipal": "https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/68999777_2431686900249343_2264771422373019648_o.jpg?_nc_cat=109&_nc_oc=AQmKrvgDJtpnF_4lW9s6MssVUDWXkRvJFCMWl1KZvq_lr6fXGq8oAA5acZh3btJ3YOE&_nc_ht=scontent.fgdl3-1.fna&oh=52a0a142af63c94dad3a9318148add0d&oe=5E5854B3"
+  },
+  {
+    "categoria": "Ropa",
+    "correo": "",
+    "descripcion": "En juan--pa boutique esta la moda ven por ella ,COMPRUEBALO",
+    "domicilio": "Calle Manuel Gutierrez Nájera 202, Guadalajarita",
+    "horario": "Lunes a Sabado 10:30am - 08:00pm y Domingo 10:30am - 4pm",
+    "imagenprincipal": "img/marcas/juanpa.jpeg",
+    "nombremarca": "Juan-pa Boutique",
+    "telefono": ""
+  },
+  {
+    "nombremarca": "Pinturas de Colima",
+    "descripcion": "Venta de pinturas",
+    "imagenprincipal": "img/marcas/pinturas_de_colima.jpeg"
+  },
+  {
+    "nombremarca": "hackorama",
+    "descripcion": "Hackathon de colima",
+    "imagenprincipal": "https://app-hackorama.herokuapp.com/assets/hackorama_logo-30707c7284f591d01236796c8e09b3af5ce5c17491588b3f27b8e0be6c54a594.svg"
+  }
+]
