@@ -68,8 +68,8 @@ a {
 
 /* erase me PLEASE */
 .card {
-  min-width: 365px;
-  max-width: 365px;
+  min-width: 325px;
+  max-width: 325px;
   display: inline-block;
 }
 
@@ -83,14 +83,14 @@ a {
 }
 
 .img-marca {
-  width: 365px;
-  height: 365px;
+  width: 325px;
+  height: 325px;
 }
 
 .card-body {
   padding: 0px;
-  width: 365px;
-  height: 365px;
+  width: 325px;
+  height: 325px;
   align-content: center;
 }
 
