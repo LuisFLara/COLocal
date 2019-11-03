@@ -21,9 +21,6 @@ const UserHeader = (props) => {
           <li className="nav-item">
             <Link to="/" className="nav-link">Contacto</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">Sobre nosotros</Link>
-          </li>
         </ul>
         <button onClick={() => {localStorage.setItem("user", null); window.location.replace("/SignIn");}}  className="btn btn-outline-danger m-2 my-sm-0 col-md-12 col-lg-2 col-xl-1">Cerrar sesión</button>
       </div>

@@ -9,11 +9,9 @@ const handleSubmit = (event) =>
     return data[input.id] = input.value;
   })
   event.preventDefault();
-  console.log(data);
   validate_user(data).then((res) =>{
-    console.log(res);
     if(res.data.datos[0].u_idusuario) {
-      localStorage.setItem("user", true);
+      localStorage.setItem("user", res.data.datos[0].u_idusuario);
       return window.location.replace("/");
     }
     alert('credenciales incorrectas')

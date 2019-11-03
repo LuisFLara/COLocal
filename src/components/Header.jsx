@@ -21,9 +21,6 @@ const Header = (props) => {
           <li className="nav-item">
             <Link to="/" className="nav-link">Contacto</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">Sobre nosotros</Link>
-          </li>
         </ul>
         <Link to="/SignUp" className="btn btn-primary m-2 my-sm-0 col-md-12 col-lg-2 col-xl-1">¡Registrate!</Link>
         <Link to="/SignIn" className="btn btn-outline-primary m-2 my-sm-0 col-md-12 col-lg-2 col-xl-1">Inicia sesión</Link>
